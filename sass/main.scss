@@ -43,6 +43,16 @@ body {
 
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
+    &__logo-box {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+
+        &:hover .header__logo {
+            animation: moveToRight 0.6s ease-out;
+        }
+    }
+
     &__logo {
         height: 35px;
     }

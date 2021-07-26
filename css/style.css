@@ -18,6 +18,12 @@ body {
   background-position: top;
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  .header__logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px; }
+    .header__logo-box:hover .header__logo {
+      animation: moveToRight 0.6s ease-out; }
   .header__logo {
     height: 35px; }
   .header__text-box {
