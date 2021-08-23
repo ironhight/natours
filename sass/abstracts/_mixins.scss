@@ -31,25 +31,15 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 1em = 16px
 */
-@mixin respond($breakpoint) {
-    @if $breakpoint == phone {
-        @media only screen and (max-width: 37.5em) {
+
+@mixin respond($breakpoint, $name) {
+    @if $name == big-desktop {
+        @media only screen and (min-width: $big-desktop/16px * 1em) {
             @content;
-        } //600px
-    }
-    @if $breakpoint == tab-port {
-        @media only screen and (max-width: 56.25em) {
+        }
+    } @else {
+        @media only screen and (max-width: $breakpoint/16px * 1em) {
             @content;
-        } //900px
-    }
-    @if $breakpoint == tab-land {
-        @media only screen and (max-width: 75em) {
-            @content;
-        } //1200px
-    }
-    @if $breakpoint == big-desktop {
-        @media only screen and (min-width: 112.5em) {
-            @content;
-        } //1800
+        }
     }
 }

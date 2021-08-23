@@ -7,10 +7,18 @@
 }
 
 html {
-    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+    font-size: base-font-size(10px); //1 rem = 10px; 10px/16px = 62.5%
 
-    @include respond(big-desktop) {
-        font-size: 75%; //1rem = 12, 12/16
+    @include respond($tablet-landscape, tl) {
+        font-size: base-font-size(9px);
+    }
+
+    @include respond($tablet-portrait, tp) {
+        font-size: base-font-size(8px);
+    }
+
+    @include respond($big-desktop, big-desktop) {
+        font-size: base-font-size(12px);
     }
 }
 

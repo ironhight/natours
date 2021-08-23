@@ -32,7 +32,7 @@
     padding: 15rem 0;
     background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
 
-    @include respond(tab-port) {
+    @include respond($tablet-portrait, tp) {
         padding: 10rem 0;
     }
 }
