@@ -20,11 +20,14 @@ html {
     @include respond($big-desktop, big-desktop) {
         font-size: base-font-size(12px);
     }
+
+    overflow-x: hidden;
 }
 
 body {
     box-sizing: border-box;
     // padding: 3rem;
+    overflow-x: hidden; //fix white space showing up on right side of page when background image should extend full length of page in google chrome
 }
 
 ::selection {
