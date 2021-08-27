@@ -23,11 +23,19 @@
         opacity: 0;
         transform: translate(-50%, -50%) scale(0.25);
         transition: all 0.5s 0.2s;
+
+        // @include respond($tablet-landscape, tl) {
+        //     width: 100%;
+        // }
     }
 
     &__left {
         width: 33.333333%;
         display: table-cell;
+
+        // @include respond($tablet-portrait, tp) {
+        //     display: table-row;
+        // }
     }
 
     &__right {
@@ -35,11 +43,25 @@
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;
+
+        // @include respond($tablet-portrait, tp) {
+        //     width: 100%;
+        // }
     }
 
     &__img {
         display: block;
         width: 100%;
+
+        // @include respond($tablet-portrait, tp) {
+        //     float: left;
+        //     width: 50%;
+        // }
+
+        // @include respond($phone, phone) {
+        //     float: left;
+        //     width: 50%;
+        // }
     }
 
     &__text {
@@ -50,6 +72,17 @@
         column-rule: 1px solid $color-grey-light-2;
 
         hyphens: auto;
+
+        // @include respond($tablet-portrait, tp) {
+        //     float: right;
+        //     width: 100%;
+        //     align-content: center;
+        // }
+
+        // @include respond($phone, phone) {
+        //     column-count: 1;
+        //     width: 100%;
+        // }
     }
 
     &:target {
@@ -78,6 +111,55 @@
 
         &:hover {
             color: $color-primary;
+        }
+    }
+
+    @include respond($tablet-portrait, tp) {
+        height: 100%;
+        &__content {
+            width: 85%;
+            display: block;
+            overflow: hidden;
+        }
+
+        &__left {
+            width: 100%;
+            height: 20vh;
+        }
+
+        &__right {
+            width: 100%;
+            display: block;
+        }
+
+        &__img {
+            // max-width: 50%;
+            // display: block;
+            float: left;
+            // object-fit: cover;
+            width: 50%;
+            height: 25vh;
+        }
+
+        &__text {
+            float: right;
+            width: 100%;
+            align-content: center;
+        }
+    }
+
+    @include respond($phone, phone) {
+        &__left {
+            height: 0;
+        }
+
+        &__img {
+            display: none;
+        }
+
+        &__text {
+            column-count: 1;
+            width: 100%;
         }
     }
 }
