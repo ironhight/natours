@@ -161,8 +161,7 @@
         font-weight: 100;
     }
 
-    // @media only screen and (max-width: 56.25em), only screen and (hover: none) {
-    @include respond($tablet-portrait, tp) {
+    @media only screen and (max-width: 56.25em), only screen and (hover: none) {
         height: auto;
         border-radius: 3px;
         background-color: $color-white;

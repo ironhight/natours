@@ -29,6 +29,8 @@
         border-radius: 50%;
         shape-outside: circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%);
+        // border-radius: 50%;
+        // overflow: hidden;
 
         @include respond($phone, phone) {
             transform: translateX(-3rem) skewX(0);
