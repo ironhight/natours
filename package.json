@@ -1,33 +1,51 @@
 {
-	"name": "natours",
-	"description": "",
-	"version": "1.0.0",
-	"main": "index.js",
-	"devDependencies": {},
-	"scripts": {
-		"watch:sass": "node-sass sass/main.scss css/style.css -w",
-		"compile:sass": "node-sass sass/main.scss css/style.comp.css",
-		"concat:css": "concat -o css/style.concat.css css/icon-font.css css/style.comp.css",
-		"prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.concat.css -o css/style.prefix.css",
-		"compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
-		"build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"
-	},
-	"dependencies": {
-		"autoprefixer": "^10.3.1",
-		"node-sass": "^6.0.1",
-		"npm-run-all": "^4.1.5",
-		"postcss": "^8.3.6",
-		"postcss-cli": "^8.3.1"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/ironhight/natours.git"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/ironhight/natours/issues"
-	},
-	"homepage": "https://github.com/ironhight/natours#readme"
+  "name": "natours",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "node-sass": "^6.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^0.2.4",
+    "workbox-background-sync": "^5.1.3",
+    "workbox-broadcast-update": "^5.1.3",
+    "workbox-cacheable-response": "^5.1.3",
+    "workbox-core": "^5.1.3",
+    "workbox-expiration": "^5.1.3",
+    "workbox-google-analytics": "^5.1.3",
+    "workbox-navigation-preload": "^5.1.3",
+    "workbox-precaching": "^5.1.3",
+    "workbox-range-requests": "^5.1.3",
+    "workbox-routing": "^5.1.3",
+    "workbox-strategies": "^5.1.3",
+    "workbox-streams": "^5.1.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
