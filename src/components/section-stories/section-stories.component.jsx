@@ -1,5 +1,3 @@
-import VideoMp4 from '../../assets/img/video.mp4';
-import VideoWebm from '../../assets/img/video.webm';
 import Nat8 from '../../assets/img/nat-8.jpg';
 import Nat9 from '../../assets/img/nat-9.jpg';
 
@@ -7,8 +5,14 @@ const SectionStories = () => (
   <section className="section-stories" id="section-stories">
     <div className="bg-video">
       <video className="bg-video__content" autoPlay muted loop>
-        <source src={VideoMp4} type="video/mp4" />
-        <source src={VideoWebm} type="video/webm" />
+        <source
+          src="https://res.cloudinary.com/dtnws8uep/video/upload/v1630446179/video_egqmq5.mp4"
+          type="video/mp4"
+        />
+        <source
+          src="https://res.cloudinary.com/dtnws8uep/video/upload/v1630446178/video_ylqqkd.webm"
+          type="video/webm"
+        />
         Your browser is not supported!
       </video>
     </div>
